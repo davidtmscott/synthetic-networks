@@ -1,9 +1,9 @@
-Package: myfirstpackage
-Title: What the Package Does (One Line, Title Case)
+Package: synthetic-networks
+Title: Generates Synthetic Networks With Transition Rates
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("David", "Scott", , "first.last@example.com", role = c("aut", "cre"))
+Description: Four algorithms for generating synthetic networks. 
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
