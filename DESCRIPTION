@@ -1,4 +1,4 @@
-Package: synthetic-networks
+Package: syntheticnetworks
 Title: Generates Synthetic Networks With Transition Rates
 Version: 0.0.0.9000
 Authors@R: 
