@@ -1,4 +1,27 @@
-
+#' Generate Lacy Habitat Patches
+#'
+#' Simulates spatially structured habitat patches that cluster near the
+#' zero-contour of a synthetic, smooth landscape. This produces a “lacy” or
+#' corridor-like structure by favoring patch locations where a weighted field
+#' of randomly placed foci cancel each other out.
+#'
+#' A large number of candidate patch locations are evaluated based on proximity
+#' to foci. The top-ranked points, where the smoothed opposing influences cancel out,
+#' are retained as patches.
+#'
+#' @param n.patches Integer. Number of habitat patches to return.
+#' @param extent Numeric. The width and height of the square landscape.
+#' @param n.foci Integer. Number of influence points (half attract, half repel).
+#' @param l.smooth Numeric. Smoothing length scale. Smaller values result in more localized effects.
+#' @param n.trials Integer. Number of candidate patch locations to evaluate.
+#'
+#' @return A list with two numeric vectors:
+#' \describe{
+#'   \item{x}{x-coordinates of selected patches}
+#'   \item{y}{y-coordinates of selected patches}
+#' }
+#'
+#' @export
 generate_lacy_patches <- function(n.patches, extent, n.foci, l.smooth, n.trials){
   # Generates a random corridorey 2D landscape, in a extent*extent square
   # Favours patches along the zero contour of a random (symmetric about zero) smooth landscape.
