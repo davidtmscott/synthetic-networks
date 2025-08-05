@@ -1,9 +1,10 @@
 Package: syntheticnetworks
-Title: Generates Synthetic Networks With Transition Rates
+Title: Generates Synthetic Habitat Networks with Transition Rates
 Version: 0.0.0.9000
 Authors@R: 
     person("David", "Scott", , "first.last@example.com", role = c("aut", "cre"))
-Description: Four algorithms for generating synthetic networks. 
+Description: Provides four algorithms for generating spatially explicit synthetic networks
+    (uniform, clumpy, lacy, and stringy) with transition rates derived from inter-patch distances.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
