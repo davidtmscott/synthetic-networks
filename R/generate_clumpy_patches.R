@@ -1,4 +1,27 @@
-
+#' Simulate a Clumpy Spatial Distribution of Patches
+#'
+#' This function generates a synthetic landscape with habitat patches
+#' arranged in spatial clumps within a square area.
+#'
+#' @param n.patches Integer. Total number of patches to generate.
+#' @param extent Numeric. The width/height of the square landscape (in coordinate units).
+#' @param clump.length Numeric. The average spatial extent (size) of each clump.
+#' @param n.foci Optional integer or matrix. Number of clump centers.
+#'   If a matrix, it should contain explicit coordinates (columns `x`, `y`).
+#' @param clump.size Optional numeric. The expected number of patches per clump.
+#'
+#' @return A list with two numeric vectors:
+#' \describe{
+#'   \item{x}{x-coordinates of patches}
+#'   \item{y}{y-coordinates of patches}
+#' }
+#'
+#' @examples
+#' landscape <- simulate_clumpy_patches(n.patches = 100, extent = 100,
+#'                                      clump.length = 5, clump.size = 10)
+#' plot(landscape$x, landscape$y, pch = 16)
+#'
+#' @export
 generate_clumpy_patches <- function(n.patches, extent, clump.length,
          n.foci = NULL, clump.size = NULL){
   # Generates a random clumpy 2D landscape, in a extent*extent square
