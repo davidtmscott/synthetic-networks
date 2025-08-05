@@ -3,11 +3,10 @@ generate_stringy_patches <- function(n.patches, extent, n.foci, l.noise){
   # Places patches on the edges of a Delaunay triangulation of a set of
   # n.foci random points, with a bit of noise (determined by l.noise)
 
-  require(RTriangle)
   x.foci <- c(extent*runif(n.foci - 2), 5, 5) # changed to n.foci - 2
   y.foci <- c(extent*runif(n.foci - 2), 0, 10)
-  pp<- pslg(matrix(c(x.foci, y.foci), ncol=2, byrow=F))
-  tt<- triangulate(pp, Y=T)
+  pp<- RTriangle::pslg(matrix(c(x.foci, y.foci), ncol=2, byrow=F))
+  tt<- RTriangle::triangulate(pp, Y=T)
 
   # place each patch on a randomly chosen edge of the triangulation
   x<- rep(0, n.patches)
