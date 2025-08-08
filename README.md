@@ -1,4 +1,5 @@
 # syntheticnetworks
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
 
 **syntheticnetworks** is an R package for simulating synthetic spatial networks, particularly useful in ecological or spatial modeling contexts. It provides multiple algorithms for generating patch networks and calculating dispersal-based transition matrices.
 
