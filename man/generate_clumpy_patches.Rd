@@ -36,7 +36,7 @@ This function generates a synthetic landscape with habitat patches
 arranged in spatial clumps within a square area.
 }
 \examples{
-landscape <- simulate_clumpy_patches(n.patches = 100, extent = 100,
+landscape <- generate_clumpy_patches(n.patches = 100, extent = 100,
                                      clump.length = 5, clump.size = 10)
 plot(landscape$x, landscape$y, pch = 16)
 

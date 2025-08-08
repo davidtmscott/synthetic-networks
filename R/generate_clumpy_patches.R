@@ -15,6 +15,7 @@
 #'   \item{x}{x-coordinates of patches}
 #'   \item{y}{y-coordinates of patches}
 #' }
+#' @importFrom stats rbinom runif rmultinom
 #'
 #' @examples
 #' landscape <- generate_clumpy_patches(n.patches = 100, extent = 100,

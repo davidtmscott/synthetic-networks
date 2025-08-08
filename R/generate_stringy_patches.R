@@ -22,6 +22,7 @@
 #' }
 #'
 #' @import RTriangle
+#' @importFrom stats runif rexp
 #' @export
 generate_stringy_patches <- function(n.patches, extent, n.foci, l.noise){
   # Places patches on the edges of a Delaunay triangulation of a set of

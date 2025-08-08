@@ -21,6 +21,7 @@
 #'   \item{y}{y-coordinates of selected patches}
 #' }
 #'
+#' @importFrom stats runif
 #' @export
 generate_lacy_patches <- function(n.patches, extent, n.foci, l.smooth, n.trials){
   # Generates a random corridorey 2D landscape, in a extent*extent square

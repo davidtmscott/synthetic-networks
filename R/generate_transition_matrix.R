@@ -13,6 +13,7 @@
 #' \deqn{R \cdot \lambda^2 \cdot \exp(-\lambda \cdot d_{ij})}
 #' where \code{d_{ij}} is the Euclidean distance between patches and \code{λ = 2 / dispersal}.
 #'
+#' @importFrom stats dist
 #' @examples
 #' landscape <- data.frame(x = runif(10, 0, 10), y = runif(10, 0, 10))
 #' generate_transition_matrix(landscape, dispersal = 2, R = 0.5)

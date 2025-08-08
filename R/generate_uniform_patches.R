@@ -7,6 +7,7 @@
 #'
 #' @return A list with numeric vectors \code{x} and \code{y}, representing the coordinates of each patch.
 #'
+#' @importFrom stats runif
 #' @examples
 #' patches <- generate_uniform_patches(n.patches = 100, extent = 10)
 #'
