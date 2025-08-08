@@ -7,7 +7,7 @@
 
 ```r
 # From GitHub (if using devtools or remotes)
-remotes::install_github("davidtmscott/syntheticnetworks")
+remotes::install_github("davidtmscott/synthetic-networks")
 ```
 
 ## Example 
