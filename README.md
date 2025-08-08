@@ -6,13 +6,14 @@
 
 ```r
 # From GitHub (if using devtools or remotes)
-remotes::install_github("yourusername/syntheticnetworks")
+remotes::install_github("davidtmscott/syntheticnetworks")
 ```
 
 ## Example 
-library(syntheticnetworks)
 
 ```r
+library(syntheticnetworks)
+
 # Generate a clumpy patch landscape
 patches <- generate_clumpy_patches(n.patches = 100, extent = 10, n.clusters = 5)
 
