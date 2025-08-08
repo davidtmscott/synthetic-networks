@@ -1,4 +1,4 @@
-#' Generate Transition Matrix from Patch Landscape
+#' Calculate Transition Matrix from Patch Landscape
 #'
 #' Computes a matrix of transition rates between habitat patches based on their pairwise distances.
 #' The rates are calculated using a negative exponential dispersal kernel, scaled by a global rate constant.
@@ -16,10 +16,10 @@
 #' @importFrom stats dist
 #' @examples
 #' landscape <- data.frame(x = runif(10, 0, 10), y = runif(10, 0, 10))
-#' generate_transition_matrix(landscape, dispersal = 2, R = 0.5)
+#' calculate_transition_matrix(landscape, dispersal = 2, R = 0.5)
 #'
 #' @export
-generate_transition_matrix <- function(landscape, dispersal, R){
+calculate_transition_matrix <- function(landscape, dispersal, R){
 
   # get distances between each point
   distances = dist(landscape, diag = T, upper = T)
