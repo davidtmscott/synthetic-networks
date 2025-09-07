@@ -21,8 +21,9 @@
 #' @export
 calculate_transition_matrix <- function(landscape, dispersal, R){
 
+  landscape_df <- data.frame(x = landscape$x, y = landscape$y)
   # get distances between each point
-  distances = dist(landscape, diag = T, upper = T)
+  distances = dist(landscape_df, diag = T, upper = T)
 
   lambda <- 2 / dispersal
 
