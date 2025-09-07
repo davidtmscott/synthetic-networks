@@ -1,0 +1,32 @@
+---
+title: "introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Introduction
+
+The **syntheticnetworks** package provides four algorithms to simulate spatial networks.
+
+```{r setup}
+library(syntheticnetworks)
+
+# Generate a clumpy patch landscape
+patches <- generate_clumpy_patches(n.patches = 200, extent = 10, clump_length = 1, n.foci = 5)
+
+# Visualize
+plot(patches$x, patches$y, main = "Clumpy Patches", pch = 19)
+
+# Create transition matrix
+tm <- calculate_transition_matrix(patches, dispersal = 2, R = 1)
+```
