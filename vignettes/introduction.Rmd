@@ -30,9 +30,9 @@ configurations:
 
 * **Clumpy**
 
-* **Lacy**
-
 * **Stringy**
+
+* **Lacy**
 
 This vignette introduces each algorithm with runnable examples.
 
@@ -67,4 +67,32 @@ plot(patches$x, patches$y, main = "Clumpy Patches", pch = 19)
 
 # Create transition matrix
 tm <- calculate_transition_matrix(patches, dispersal = 2, R = 1)
+```
+
+## Stringy patches
+
+Stringy patches are placed along the edges of a Delaunay triangulation, with
+optional random noise.
+
+```{r setup}
+stringy <- generate_stringy_patches(
+  n.patches = 200, extent = 10,
+  n.foci = 20, l.noise = 1
+)
+plot(stringy$x, stringy$y, pch = 19, col = "red",
+     main = "Stringy patches", xlab = "x", ylab = "y")
+```
+
+## Lacy patches 
+
+Lacy patches are concentrated along the zero-contour of a smooth random
+landscape.
+
+```{r setup}
+lacy <- generate_lacy_patches(
+  n.patches = 200, extent = 10,
+  n.foci = 5, l.smooth = 1, n.trials = 3
+)
+plot(lacy$x, lacy$y, pch = 19, col = "purple",
+     main = "Lacy patches", xlab = "x", ylab = "y")
 ```
