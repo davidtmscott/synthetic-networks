@@ -1,5 +1,5 @@
 ---
-title: "introduction"
+title: "Introduction"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{introduction}
@@ -17,7 +17,6 @@ knitr::opts_chunk$set(
 library(syntheticnetworks)
 ```
 
-# Introduction
 
 The **syntheticnetworks** package provides algorithms to simulate spatial
 distributions of habitat patches and calculating transition matrices based on
@@ -59,14 +58,13 @@ length and clump size.
 ```{r}
 
 # Generate a clumpy patch landscape
-patches <- generate_clumpy_patches(n.patches = 200, extent = 10, clump.length = 1,
-                                   n.foci = 5)
+clumpy <- generate_clumpy_patches(n.patches = 1000, extent = 10, clump.length = 1,
+                                   n.foci = 10)
 
 # Visualise
-plot(patches$x, patches$y, main = "Clumpy Patches", pch = 19)
+plot(clumpy$x, clumpy$y, pch = 19, col = "darkgreen",
+     main = "Clumpy patches", xlab = "x", ylab = "y")
 
-# Create transition matrix
-tm <- calculate_transition_matrix(patches, dispersal = 2, R = 1)
 ```
 
 ## Stringy patches
@@ -76,8 +74,8 @@ optional random noise.
 
 ```{r}
 stringy <- generate_stringy_patches(
-  n.patches = 200, extent = 10,
-  n.foci = 20, l.noise = 1
+  n.patches = 500, extent = 10,
+  n.foci = 6, l.noise = 0.1
 )
 plot(stringy$x, stringy$y, pch = 19, col = "red",
      main = "Stringy patches", xlab = "x", ylab = "y")
@@ -90,8 +88,8 @@ landscape.
 
 ```{r}
 lacy <- generate_lacy_patches(
-  n.patches = 200, extent = 10,
-  n.foci = 5, l.smooth = 1, n.trials = 3
+  n.patches = 2000, extent = 10,
+  n.foci = 6, l.smooth = 0.1, n.trials = 10000
 )
 plot(lacy$x, lacy$y, pch = 19, col = "purple",
      main = "Lacy patches", xlab = "x", ylab = "y")
@@ -103,8 +101,11 @@ Once a landscape has been generated, a transition matrix can be calculated
 using a negative exponential dispersal kernel.
 
 ```{r}
+
+landscape_df <- data.frame(x = uniform$x, y = uniform$y)
+
 tm <- calculate_transition_matrix(
-  landscape = as.data.frame(uniform),
+  landscape = landscape_df,
   dispersal = 10,
   R = 1
 )
