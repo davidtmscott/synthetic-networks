@@ -17,12 +17,12 @@ generate_clumpy_patches(
 
 \item{extent}{Numeric. The width/height of the square landscape (in coordinate units).}
 
-\item{clump.length}{Numeric. The average spatial extent (size) of each clump.}
+\item{clump.length}{Numeric. The mean spatial extent (size) of each clump.}
 
 \item{n.foci}{Optional integer or matrix. Number of clump centers.
 If a matrix, it should contain explicit coordinates (columns \code{x}, \code{y}).}
 
-\item{clump.size}{Optional numeric. The expected number of patches per clump.}
+\item{clump.size}{Optional numeric. The mean number of patches per clump.}
 }
 \value{
 A list with two numeric vectors:
@@ -36,8 +36,8 @@ This function generates a synthetic landscape with habitat patches
 arranged in spatial clumps within a square area.
 }
 \examples{
-landscape <- generate_clumpy_patches(n.patches = 100, extent = 100,
-                                     clump.length = 5, clump.size = 10)
+landscape <- generate_clumpy_patches(n.patches = 200, extent = 10,
+                                     clump.length = 1, n.foci = 5)
 plot(landscape$x, landscape$y, pch = 16)
 
 }
