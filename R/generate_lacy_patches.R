@@ -38,7 +38,9 @@ generate_lacy_patches <- function(n.patches, extent, n.foci, l.smooth, n.trials)
   y.foci <- extent*runif(n.foci)
 
   # half of foci are "positive", half negatve
-  sign.foci <- rep(c(1, -1), c(n.foci/2, n.foci - n.foci/2))
+  #sign.foci <- rep(c(1, -1), c(n.foci/2, n.foci - n.foci/2))
+  # Half positive, half negative, round down/up to match n.foci
+  sign.foci <- c(rep(1, floor(n.foci/2)), rep(-1, ceiling(n.foci/2)))
 
   x.trial<- extent*runif(n.trials)
   y.trial<- extent*runif(n.trials)
