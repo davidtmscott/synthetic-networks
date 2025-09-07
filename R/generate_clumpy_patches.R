@@ -5,10 +5,10 @@
 #'
 #' @param n.patches Integer. Total number of patches to generate.
 #' @param extent Numeric. The width/height of the square landscape (in coordinate units).
-#' @param clump.length Numeric. The average spatial extent (size) of each clump.
+#' @param clump.length Numeric. The mean spatial extent (size) of each clump.
 #' @param n.foci Optional integer or matrix. Number of clump centers.
 #'   If a matrix, it should contain explicit coordinates (columns `x`, `y`).
-#' @param clump.size Optional numeric. The expected number of patches per clump.
+#' @param clump.size Optional numeric. The mean number of patches per clump.
 #'
 #' @return A list with two numeric vectors:
 #' \describe{
@@ -18,8 +18,8 @@
 #' @importFrom stats rbinom runif rmultinom
 #'
 #' @examples
-#' landscape <- generate_clumpy_patches(n.patches = 100, extent = 100,
-#'                                      clump.length = 5, clump.size = 10)
+#' landscape <- generate_clumpy_patches(n.patches = 200, extent = 10,
+#'                                      clump.length = 1, n.foci = 5)
 #' plot(landscape$x, landscape$y, pch = 16)
 #'
 #' @export
