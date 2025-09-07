@@ -59,7 +59,7 @@ length and clump size.
 ```{r}
 
 # Generate a clumpy patch landscape
-patches <- generate_clumpy_patches(n.patches = 200, extent = 10, clump_length = 1,
+patches <- generate_clumpy_patches(n.patches = 200, extent = 10, clump.length = 1,
                                    n.foci = 5)
 
 # Visualise
