@@ -96,3 +96,26 @@ lacy <- generate_lacy_patches(
 plot(lacy$x, lacy$y, pch = 19, col = "purple",
      main = "Lacy patches", xlab = "x", ylab = "y")
 ```
+
+## Transition matrices
+
+Once a landscape has been generated, a transition matrix can be calculated
+using a negative exponential dispersal kernel.
+
+```{r setup}
+tm <- calculate_transition_matrix(
+  landscape = as.data.frame(uniform),
+  dispersal = 10,
+  R = 1
+)
+
+dim(tm)
+image(tm, main = "Transition matrix (uniform patches)")
+```
+
+# Summary
+
+The **syntheticnetworks** package provides flexible tools for generating
+synthetic landscapes and calculating connectivity between patches.
+These algorithms can be used to explore how different spatial structures affect
+network dynamics.
