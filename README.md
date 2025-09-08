@@ -16,7 +16,8 @@ remotes::install_github("davidtmscott/synthetic-networks")
 library(syntheticnetworks)
 
 # Generate a clumpy patch landscape
-patches <- generate_clumpy_patches(n.patches = 200, extent = 10, clump_length = 1, n.foci = 5)
+patches <- generate_clumpy_patches(n.patches = 200, extent = 10, 
+                                   clump_length = 1, n.foci = 5)
 
 # Visualize
 plot(patches$x, patches$y, main = "Clumpy Patches", pch = 19)
@@ -24,6 +25,20 @@ plot(patches$x, patches$y, main = "Clumpy Patches", pch = 19)
 # Create transition matrix
 tm <- calculate_transition_matrix(patches, dispersal = 2, R = 1)
 ```
+
+## Example plots 
+
+**Uniform patches**  
+![Uniform patches](man/figures/uniform.png)
+
+**Clumpy patches**  
+![Clumpy patches](man/figures/clumpy.png)
+
+**Stringy patches**  
+![Stringy patches](man/figures/stringy.png)
+
+**Lacy patches**  
+![Lacy patches](man/figures/lacy.png)
 
 ## Features
 
