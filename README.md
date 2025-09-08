@@ -28,17 +28,12 @@ tm <- calculate_transition_matrix(patches, dispersal = 2, R = 1)
 
 ## Example plots 
 
-**Uniform patches**  
-![Uniform patches](man/figures/uniform.png)
-
-**Clumpy patches**  
-![Clumpy patches](man/figures/clumpy.png)
-
-**Stringy patches**  
-![Stringy patches](man/figures/stringy.png)
-
-**Lacy patches**  
-![Lacy patches](man/figures/lacy.png)
+<p align="center">
+  <img src="man/figures/uniform.png" width="45%">
+  <img src="man/figures/clumpy.png" width="45%"><br>
+  <img src="man/figures/stringy.png" width="45%">
+  <img src="man/figures/lacy.png" width="45%">
+</p>
 
 ## Features
 
